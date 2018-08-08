@@ -47,16 +47,14 @@ For more advance usage, please refer to [this]()
 
 ## Documentation
 
-/**
+### find(param1, param2, param3)
 * Simple query with filters
 * @param {string} param1 - can be an object to filter
 * @param {string} param2 - can be ('param', 'value')
 * @param {string} param3 - can be ('param', 'in', 'value')
 * @returns {object} query object
-*/
-find(param1, param2, param3)
 
-/**
+### get(params, { limit, offset, groupBy, orderBy})
 * Querying dataset with pagination
 * @param {string} param - query parameter
 * @param {string} limit - limit
@@ -64,29 +62,25 @@ find(param1, param2, param3)
 * @param {string} groupBy - group by statement
 * @param {string} orderBy - order by statement
 * @returns {object} query object
-*/
-get(params, { limit, offset, groupBy, orderBy}) {
 
-	/**
-	* Count the number of entry in a table
-	* @param {string} param - query parameter
-	* @param {string} limit - limit
-	* @param {string} offset - offset
-	* @param {string} groupBy - group by statement
-	* @param {string} orderBy - order by statement
-	* @returns {object} returns an array
-	* better to catch the return value a [count] = model.count()
-	*/
-	count(params, { limit, offset, groupBy, orderBy}) {
+### count(params, { limit, offset, groupBy, orderBy})
+* Count the number of entry in a table
+* @param {string} param - query parameter
+* @param {string} limit - limit
+* @param {string} offset - offset
+* @param {string} groupBy - group by statement
+* @param {string} orderBy - order by statement
+* @returns {object} returns an array
+* better to catch the return value a [count] = model.count()
 
-ins(params, returning) {
+### ins(params, returning)
 
-upd(updateValue, params, returning) {
+### upd(updateValue, params, returning)
 
-del(params) {
+### del(params)
 
-getDB() {
+### getDB()
 
-getJoinDB() {
+### getJoinDB()
 
-getConn() {
+### getConn()
